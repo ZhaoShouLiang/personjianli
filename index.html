@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style>
+	    *{margin: 0;padding: 0;}
+		body,html{
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑";
+			width: 100%;
+			height: 100%;
+		}
+		.main{
+			position:relative;
+			width:100%;height:100%;
+			overflow: hidden;
+		}
+		.music-btn{
+			z-index: 101;
+			width: 44px;
+			height: 44px;
+			background:url(image/music.png) no-repeat;
+			position: fixed;
+			right: 10px;
+			top: 10px;
+			
+		}
+		.arrow{
+			width: 20%;
+			position: fixed;
+			bottom: 6px;
+			left: 40%;
+			z-index: 100;
+		}
+		.fadeInLeftUp{
+			
+			background-color: red;
+			top: 20px;
+		}
+		.fadeInLeftRight{
+			background-color: yellow;
+			right: 0px;
+			top: 50%;
+		}
+		.fadeInLeftUp,.fadeInLeftRight{
+			width: 30%;
+			height: 20%;
+			position: fixed;
+			text-align: center;
+			/*font-family: "微软雅黑";*/
+			color:#fff;	
+		}
+		.page{
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transition: all 0.3s linear;
+            transform: translate(0,0);
+           -webkit-transition: all 0.3s linear;
+           -webkit-transform: translate(0,0);
+		}
+		.page1 p,.page2 p {
+			transform:translateX(-100%);
+			-webkit-transform:translateX(-100%);
+			-webkit-animation-fill-mode:both;
+			animation-fill-mode:both;
+			font-family:"微软雅黑";
+			letter-spacing: 1px;
+		}
+
+		.page1{
+			background:url(image/0.jpg) no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+
+		}
+		.photo{
+			display: block;
+			width: 130px;
+			height:130px;
+			border-radius: 130px;
+			margin: 100px auto;
+			margin-bottom: 20px;
+			
+		}
+		.page1 p{
+			color: #666;
+			margin-left: 120px;
+			line-height: 44px;
+			}
+		.page2{
+			background:url(image/4.jpg) no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		
+		.page2 p{
+			width: 60px;
+			height: 60px;
+			border-radius: 60px;
+			background-color: pink;
+			text-align: center;
+			line-height: 60px;
+		}
+		.page2 .qq{
+			height: 40px;
+			line-height: 40px;
+			width: 130px;
+			text-align: center;
+			background-color: #4dadf0;
+			font-size: 20px;
+			border-radius: 3px;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			
+			
+		}
+		.page2 .skill{
+			width: 72px;
+			height: 72px;
+			border-radius:72px;
+			background-color: orange;
+			line-height: 72px;
+			color: #fff;
+			position: absolute;
+			top: 300px;
+			left:174px;
+}		
+		.page3{
+			background-color: blue;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.page3 p{
+			font-size: 15px;
+			color: teal;
+		}
+		.jquery{
+			
+			position: absolute;
+			top: 210px;
+			left: 180px;
+		}
+		.H5{
+			
+			position: absolute;
+			top: 400px;
+			left: 180px;
+		}
+		.html{
+			position: absolute;
+			top: 306px;
+			left: 70px;
+		}
+		.css{
+			position: absolute;
+			top: 306px;
+			left: 288px;
+		}
+		.pageDown{
+			transform:translate(0,100%);
+			-webkit-transform:translate(0,100%);
+		}
+		.pageUp{
+			-webkit-transform:translate(0,-100%);
+			transform:translate(0,-100%);
+		}
+		.hide{display: none;}
+	</style>
+<body>
+	
+		<div class="music-btn animated music-animate infinite"></div>
+		<div class="arrow animated arrow-animate infinite">
+			<img src="image/arrow.png" width="100%" alt="">
+		</div><!--音乐按钮 -->
+		
+
+
+	 	<div class="main">
+	 	  	<div class="page page1">
+			
+	 		<img class="box1 photo animated fadeInLeft-animate " src="image/1.jpg" width="100%"  alt="">
+	 		<p class="box1 animated fadeInLeft-animate delay-time1"><span>姓名:</span><span>赵守良</span></p>
+	 		<p class="box1 animated fadeInLeft-animate delay-time2"><span>性别:</span><span>男</span></p>
+	 		<p class="box1 animated fadeInLeft-animate delay-time3"><span>联系方式:</span><span>m15133573182@163.com</span></p>
+	 		<p class="box1 animated fadeInLeft-animate delay-time4"><span>年龄:</span><span>24</span></p>
+
+	 	    </div>
+	        <div class="page page2 pageDown">
+				<p class="box1 hide qq  fadeInLeft-animate ">求职意向</p>
+				<p class="box1 hide qq  fadeInRight-animate">前端开发</p>
+		 		<p class="box1 hide skill fadeInRight-animate">技能</p>
+		 		<p class="box1 hide jquery fadeInRight-animate delay-time1">jquery</p>
+		 		<p class="box1 hide css fadeInRight-animate delay-time2">css</p>
+		 		<p class="box1 hide html fadeInLeft-animate delay-time3">html</p>
+		 		<p class="box1 hide H5 fadeInLeft-animate delay-time4">H5</p>
+	 	    </div>
+	 	    <div class="page page3 pageDown">
+				<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">项目经验</p>
+				
+	 	    </div>  
+	 	</div>
+
+		
+	<!-- <audio id="mp3"src="video/1.mp3" autoplay></audio> -->
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript">
+document.addEventListener('touchmove', function (e) {e.preventDefault();}, false);// //uc浏览器滑动问题
+	var music=document.getElementById('mp3')
+	$(function(){
+		var switchBtn = true;
+		touch.on(".music-btn","tap",function(){//使用百度插件
+			if(switchBtn == true){
+				$(".music-btn").removeClass("music-animate");
+				switchBtn=false;
+				music.pause();
+			}
+			else{
+				$(".music-btn").addClass("music-animate");
+				switchBtn=true;
+				music.play();
+			}
+		})
+
+
+	var curIndex=0;
+	var pageNum=$(".page").length-1;
+	touch.on(".main","swipeup",function(){
+		if(curIndex>=pageNum){
+			return;
+		}
+		$(".page").eq(curIndex).find(".box1").addClass("hide")
+		$(".page").eq(curIndex).addClass("pageUp");
+		curIndex++;
+		if(curIndex==pageNum)
+			{$(".arrow").hide()}
+		$(".page").eq(curIndex).removeClass("pageDown");
+		$(".page").eq(curIndex).find(".box1").removeClass("hide")
+		
+		
+
+	})
+	touch.on(".main","swipedown",function(){
+		$(".arrow").show()
+		if(curIndex<=0){
+			return;
+		}
+		$(".page").eq(curIndex).find(".box1").addClass("hide")
+		$(".page").eq(curIndex).addClass("pageDown");
+		   curIndex--;
+		$(".page").eq(curIndex).removeClass("pageUp");
+		$(".page").eq(curIndex).find(".box1").removeClass("hide")
+
+	})
+})
+</script>
+
+</html>
